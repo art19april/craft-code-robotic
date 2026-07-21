@@ -16,8 +16,8 @@ const display = Space_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://craft-code-robotic-thailand.artapichart.chatgpt.site"),
-  title: "Craft Code Robotic | Coding, Robotics & AI สำหรับเด็ก",
-  description: "สถาบัน Coding, Robotics และ AI สำหรับเด็กอายุ 3–15+ ปี เรียนรู้ผ่านโปรเจกต์จริง พร้อมโค้ชดูแลใกล้ชิด ที่เซ็นทรัลแจ้งวัฒนะ",
+  title: "Craft Code Robotic | Coding, Robotics, Game Design & AI",
+  description: "สถาบัน Coding, Robotics, Game Design และ AI สำหรับเด็ก เยาวชน และผู้ใหญ่ เรียนรู้ผ่านโปรเจกต์จริง พร้อมโค้ชดูแลใกล้ชิด ที่เซ็นทรัลแจ้งวัฒนะ",
   openGraph: {
     title: "Craft Code Robotic — Future Skills for Gen Alpha",
     description: "สร้างนักคิด สร้างนักลงมือทำ สู่อนาคตที่เด็กออกแบบเอง",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Craft Code Robotic — Future Skills for Gen Alpha",
-    description: "Coding · Robotics · AI สำหรับเด็ก 3–15+ ปี",
+    description: "Coding · Robotics · Game Design · AI สำหรับเด็ก เยาวชน และผู้ใหญ่",
     images: ["/og.png"],
   },
   icons: {
