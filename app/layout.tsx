@@ -15,7 +15,7 @@ const display = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://craft-code-robotic.sites.openai.com"),
+  metadataBase: new URL("https://craft-code-robotic-thailand.artapichart.chatgpt.site"),
   title: "Craft Code Robotic | Coding, Robotics & AI สำหรับเด็ก",
   description: "สถาบัน Coding, Robotics และ AI สำหรับเด็กอายุ 3–15+ ปี เรียนรู้ผ่านโปรเจกต์จริง พร้อมโค้ชดูแลใกล้ชิด ที่เซ็นทรัลแจ้งวัฒนะ",
   openGraph: {
