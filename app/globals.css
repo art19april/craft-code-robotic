@@ -228,6 +228,33 @@ button, summary { font: inherit; }
 .award-card small { color: #a8aec0; }
 .competition-row { display: flex; flex-wrap: wrap; gap: 16px 22px; margin-top: 28px; color: #707b9e; font: 600 9px var(--font-display), sans-serif; letter-spacing: .12em; }
 
+.news-section { position: relative; overflow: hidden; padding: 120px max(6vw,32px); background: radial-gradient(circle at 78% 8%,rgba(72,42,176,.48),transparent 34%),linear-gradient(145deg,#07091d,#10164a 55%,#050716); }
+.news-section::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .12; background-image: linear-gradient(rgba(75,136,255,.28) 1px,transparent 1px),linear-gradient(90deg,rgba(75,136,255,.28) 1px,transparent 1px); background-size: 64px 64px; mask-image: linear-gradient(to bottom,#000,transparent 78%); }
+.news-section > * { position: relative; z-index: 1; }
+.news-head { display: grid; grid-template-columns: 1.2fr .8fr; gap: 10vw; align-items: end; margin: 68px 0 55px; }
+.news-head h2 { margin: 0; font-size: clamp(42px,5.2vw,78px); line-height: 1.08; letter-spacing: -.055em; }
+.news-head p { max-width: 620px; margin: 0; color: #aeb6d0; font-size: 17px; line-height: 1.85; }
+.milestone-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 16px; }
+.milestone-card { position: relative; min-height: 610px; overflow: hidden; border: 1px solid rgba(255,255,255,.17); border-radius: 24px; background: #080b20; box-shadow: 0 35px 90px rgba(0,0,0,.28); }
+.milestone-card > img { width: 100%; height: 100%; object-fit: cover; transition: transform .9s cubic-bezier(.2,.7,.2,1),filter .5s; }
+.milestone-card:hover > img { transform: scale(1.035); filter: saturate(1.08); }
+.milestone-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top,rgba(3,5,18,.97) 2%,rgba(4,7,24,.62) 42%,transparent 72%); }
+.award-story > img { object-position: center; }
+.milestone-overlay { position: absolute; z-index: 2; left: 32px; right: 32px; bottom: 30px; }
+.news-badge { display: inline-flex; padding: 7px 10px; margin-bottom: 14px; border: 1px solid rgba(107,229,255,.45); border-radius: 999px; color: #73e8ff; background: rgba(25,109,151,.2); font: 700 9px var(--font-display),sans-serif; letter-spacing: .13em; }
+.gold-badge { color: var(--gold); border-color: rgba(255,201,40,.46); background: rgba(255,201,40,.09); }
+.dbd-mark { width: 150px; height: 62px; margin-bottom: 13px; padding: 8px; border-radius: 8px; object-fit: contain; background: #fff; }
+.milestone-overlay h3 { margin: 0 0 10px; font-size: clamp(24px,2.4vw,38px); line-height: 1.15; letter-spacing: -.035em; }
+.milestone-overlay p { max-width: 680px; margin: 0; color: #c2c8db; font-size: 14px; line-height: 1.75; }
+.competition-gallery { display: grid; grid-template-columns: 1.15fr .85fr .85fr; gap: 12px; margin-top: 16px; }
+.competition-gallery figure { position: relative; height: 270px; margin: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.14); border-radius: 16px; background: #080b20; }
+.competition-gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s; }
+.competition-gallery figure:hover img { transform: scale(1.045); }
+.competition-gallery figure::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top,rgba(4,6,18,.88),transparent 60%); }
+.competition-gallery figcaption { position: absolute; z-index: 2; left: 18px; bottom: 16px; color: #fff; font: 650 10px var(--font-display),sans-serif; letter-spacing: .12em; }
+.competition-gallery figcaption span { margin-right: 10px; color: var(--gold); }
+.news-section .competition-row { justify-content: center; margin-top: 28px; color: #7784a9; }
+
 .team-head { display: grid; grid-template-columns: 1fr .8fr; gap: 10vw; align-items: end; }
 .team-head h2 { margin-top: 60px; }
 .team-head blockquote { margin: 0; padding-left: 28px; border-left: 3px solid var(--gold); color: #5f6572; font-size: 19px; line-height: 1.8; }
@@ -275,8 +302,8 @@ footer { position: relative; display: grid; grid-template-columns: 1fr 1fr auto;
 
 /* Cinematic progressive reveal: supported browsers animate as sections enter view. */
 @supports (animation-timeline: view()) {
-  .section-kicker, .manifesto-grid, .program-intro, .flex-head, .lab-head, .experience-head, .team-head, .faq-layout,
-  .track-card, .config-grid article, .lab-grid article, .photo-grid figure, .award-card, .team-list article {
+  .section-kicker, .manifesto-grid, .program-intro, .flex-head, .lab-head, .experience-head, .team-head, .faq-layout, .news-head,
+  .track-card, .config-grid article, .lab-grid article, .photo-grid figure, .award-card, .team-list article, .milestone-card, .competition-gallery figure {
     animation: revealUp both cubic-bezier(.2,.75,.2,1);
     animation-timeline: view();
     animation-range: entry 5% cover 28%;
@@ -297,12 +324,13 @@ footer { position: relative; display: grid; grid-template-columns: 1fr 1fr auto;
   .hero-copy { max-width: 850px; }
   .hero-visual { justify-self: center; width: min(78vw, 620px); }
   .portal-frame img { aspect-ratio: 5/4; }
-  .manifesto-grid, .program-intro, .experience-head, .team-head, .fees-head, .schedule-section, .flex-head, .lab-head { grid-template-columns: 1fr; gap: 40px; }
+  .manifesto-grid, .program-intro, .experience-head, .team-head, .fees-head, .schedule-section, .flex-head, .lab-head, .news-head { grid-template-columns: 1fr; gap: 40px; }
   .outcome-grid { grid-template-columns: repeat(2, 1fr); }
   .outcome-grid article:nth-child(2) { border-right: 0; }
   .program-card { grid-template-columns: 50px 1fr 1fr 48px; }
   .achievement-section { grid-template-columns: 1fr; }
   .achievement-image { min-height: 540px; }
+  .milestone-grid { grid-template-columns: 1fr; }.milestone-card { min-height: 590px; }.competition-gallery { grid-template-columns: 1fr 1fr; }.competition-gallery figure:first-child { grid-column: 1/-1; }
   .team-layout { grid-template-columns: 1fr; }
   .staff-poster { max-width: 620px; margin: 30px auto 0; }
   .config-grid { grid-template-columns: repeat(2,1fr); }.lab-grid { grid-template-columns: 1fr; }.lab-grid article { min-height: 260px; }.lab-grid h3 { margin-top: 48px; }
@@ -327,10 +355,10 @@ footer { position: relative; display: grid; grid-template-columns: 1fr 1fr auto;
   .floating-card { min-width: 150px; padding: 12px; }
   .card-top { left: -4%; top: 10%; }
   .card-bottom { right: -3%; bottom: 10%; }
-  .manifesto, .program-section, .experience-section, .team-section, .faq-section, .fees-section, .schedule-section, .lab-section { padding: 90px 20px; }
+  .manifesto, .program-section, .experience-section, .team-section, .faq-section, .fees-section, .schedule-section, .lab-section, .news-section { padding: 90px 20px; }
   .flex-section { padding: 0 20px 90px; }
   .manifesto-grid { margin: 48px 0 55px; }
-  .manifesto h2, .program-intro h2, .experience-head h2, .achievement-copy h2, .team-head h2, .faq-layout h2, .fees-head h2, .schedule-copy h2, .flex-head h2, .lab-head h2 { font-size: 43px; }
+  .manifesto h2, .program-intro h2, .experience-head h2, .achievement-copy h2, .team-head h2, .faq-layout h2, .fees-head h2, .schedule-copy h2, .flex-head h2, .lab-head h2, .news-head h2 { font-size: 43px; }
   .outcome-grid { grid-template-columns: 1fr; }
   .outcome-grid article, .outcome-grid article:first-child { border-right: 0; border-bottom: 1px solid #cfd1d6; padding: 26px 0; }
   .outcome-grid h3 { margin-top: 20px; }
@@ -348,6 +376,7 @@ footer { position: relative; display: grid; grid-template-columns: 1fr 1fr auto;
   .photo-grid .photo-large { height: 400px; }
   .achievement-image { min-height: 420px; }
   .achievement-copy { padding: 80px 20px; }
+  .milestone-card { min-height: 510px; border-radius: 18px; }.milestone-overlay { left: 20px; right: 20px; bottom: 20px; }.milestone-overlay p { font-size: 12px; }.dbd-mark { width: 125px; height: 52px; }.competition-gallery { grid-template-columns: 1fr; }.competition-gallery figure,.competition-gallery figure:first-child { grid-column: auto; height: 245px; }
   .team-list article { grid-template-columns: 28px 50px 1fr; gap: 12px; }
   .team-list h3 { flex-direction: column; gap: 4px; font-size: 18px; }
   .team-list p { grid-column: 3; margin-top: -8px; }

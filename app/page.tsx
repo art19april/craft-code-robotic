@@ -71,6 +71,7 @@ export default function Home() {
         <div className="nav-links">
           <a href="#programs">Roadmap</a>
           <a href="#flexible">รูปแบบเรียน</a>
+          <a href="#news">ข่าว & ผลงาน</a>
           <a href="#schedule">เวลาเรียน</a>
           <a href="#team">ทีมครู</a>
         </div>
@@ -78,7 +79,7 @@ export default function Home() {
         <details className="mobile-menu">
           <summary aria-label="เปิดเมนู">เมนู</summary>
           <div>
-            <a href="#programs">Roadmap</a><a href="#flexible">รูปแบบเรียน</a><a href="#schedule">เวลาเรียน</a><a href="#team">ทีมครู</a>
+            <a href="#programs">Roadmap</a><a href="#flexible">รูปแบบเรียน</a><a href="#news">ข่าว & ผลงาน</a><a href="#schedule">เวลาเรียน</a><a href="#team">ทีมครู</a>
             <a href={LINE_URL} target="_blank" rel="noreferrer">ทดลองเรียนฟรี ↗</a>
           </div>
         </details>
@@ -170,7 +171,26 @@ export default function Home() {
         <div className="photo-grid"><figure className="photo-large"><img src="/images/coding-class.jpeg" alt="ครู Craft Code ดูแลนักเรียนในคลาส Coding" /><figcaption>SMALL CLASS · CLOSE COACHING</figcaption></figure><figure><img src="/images/cassiope-room.jpeg" alt="ห้องเรียน Cassiope ของ Craft Code" /><figcaption>ROBOTICS LAB</figcaption></figure><figure><img src="/images/stella-room.jpeg" alt="ห้องเรียน Stella ของ Craft Code" /><figcaption>CREATIVE PLAY SPACE</figcaption></figure></div>
       </section>
 
-      <section className="achievement-section" id="achievement"><div className="achievement-image"><img src="/images/fll-award.jpeg" alt="นักเรียน Craft Code รับรางวัล Challenge Solution Award" /><div className="scanline" aria-hidden="true" /></div><div className="achievement-copy"><div className="section-kicker light">BEYOND THE CLASSROOM <span>06</span></div><h2>จากห้องเรียน<br />สู่เวทีจริง</h2><p>การแข่งขันคือพื้นที่ให้น้องใช้ทั้งตรรกะ ความคิดสร้างสรรค์ และทีมเวิร์ก ภายใต้สถานการณ์จริง ไม่ใช่เพื่อชนะอย่างเดียว แต่เพื่อเห็นว่าตัวเองไปได้ไกลแค่ไหน</p><div className="award-card"><span>2025</span><div><strong>STEM AWARD · FLL THAILAND</strong><small>พร้อมผลงาน Robot Game อันดับ 8</small></div></div><div className="competition-row"><span>FIRST LEGO LEAGUE</span><span>WRO</span><span>IRSA</span><span>TIRT TAIWAN</span></div></div></section>
+      <section className="news-section" id="news">
+        <div className="section-kicker light">NEWS & MILESTONES <span>06</span></div>
+        <div className="news-head"><h2>เรื่องสำคัญ<br />ที่เราอยากแบ่งปัน</h2><p>มาตรฐานของสถาบันและประสบการณ์บนเวทีจริง คืออีกส่วนหนึ่งของการเรียนรู้ที่ผู้ปกครองควรได้เห็น</p></div>
+        <div className="milestone-grid">
+          <article className="milestone-card dbd-story">
+            <img src="/images/dbd-franchise-standard-2026.jpg" alt="Craft Code Robotic เข้ารับประกาศนียบัตร DBD Franchise Standard 2026" />
+            <div className="milestone-overlay"><div className="news-badge">LATEST · 2026</div><img className="dbd-mark" src="/images/dbd-franchise-standard-logo.jpg" alt="DBD Franchise Standard" /><h3>ก้าวสำคัญของ Craft Code Robotic</h3><p>เข้ารับประกาศนียบัตรจากกรมพัฒนาธุรกิจการค้า ในโครงการ DBD Franchise Standard 2026 สะท้อนความตั้งใจในการพัฒนาระบบการเรียนรู้และการดำเนินงานอย่างมีมาตรฐาน</p></div>
+          </article>
+          <article className="milestone-card award-story">
+            <img src="/images/fll-award.jpeg" alt="นักเรียน Craft Code รับรางวัล Challenge Solution Award" />
+            <div className="milestone-overlay"><div className="news-badge gold-badge">COMPETITION</div><h3>จากห้องเรียน สู่เวทีจริง</h3><p>Challenge Solution Award · FIRST LEGO League Thailand พร้อมประสบการณ์แก้โจทย์ ทำงานเป็นทีม และนำเสนอผลงานจริง</p></div>
+          </article>
+        </div>
+        <div className="competition-gallery" aria-label="ภาพบรรยากาศการเรียนรู้และการแข่งขัน">
+          <figure><img src="/images/craft-code-community.jpeg" alt="ทีมนักเรียน Craft Code ร่วมกิจกรรม" /><figcaption><span>01</span>TEAM EXPERIENCE</figcaption></figure>
+          <figure><img src="/images/robot-activity.jpeg" alt="กิจกรรมหุ่นยนต์ของ Craft Code" /><figcaption><span>02</span>ROBOTICS CHALLENGE</figcaption></figure>
+          <figure><img src="/images/coding-class.jpeg" alt="ครูดูแลนักเรียนในคลาสโค้ดดิ้ง" /><figcaption><span>03</span>COACHING & PRACTICE</figcaption></figure>
+        </div>
+        <div className="competition-row"><span>FIRST LEGO LEAGUE</span><span>WRO</span><span>IRSA</span><span>TIRT TAIWAN</span></div>
+      </section>
 
       <section className="team-section" id="team">
         <div className="team-head"><div><div className="section-kicker">ACADEMIC STAFF <span>07</span></div><h2>ทีมครูที่เชี่ยวชาญ<br />และเข้าใจผู้เรียน</h2></div><blockquote>“เราไม่ได้แค่สอน Class แต่คอย Feed Forward และดูแลน้อง ๆ เหมือนเป็นลูกของเราเอง”</blockquote></div>
