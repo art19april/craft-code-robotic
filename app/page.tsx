@@ -43,16 +43,6 @@ const tracks = [
   },
 ];
 
-const fees = [
-  ["Early Coding Explorer / Unplug", "8 ครั้ง · 1 ชม.", "17,900", "–", "–"],
-  ["Icon Block Coding", "8 ครั้ง · 1.5 ชม.", "14,900", "28,310", "40,230"],
-  ["Scratch Coding & Game Design", "8 ครั้ง · 2 ชม.", "17,900", "34,010", "48,330"],
-  ["Python Coding", "8 ครั้ง · 2 ชม.", "18,900", "35,910", "51,030"],
-  ["3D Design & Modeling", "4 ครั้ง · 2 ชม.", "19,900", "37,810", "–"],
-  ["Roblox Game Design", "6 ครั้ง · 2 ชม.", "16,900", "32,110", "45,630"],
-  ["Extensions / Special Workshops", "8 ครั้ง · 3 ชม.", "27,900", "53,010", "–"],
-];
-
 const staff = [
   ["T. ART", "เดชชาติ เจิมประไพ", "Director"],
   ["T. PIM", "อาทิชา เจิมประไพ", "Asst. Director"],
@@ -80,7 +70,7 @@ export default function Home() {
         </a>
         <div className="nav-links">
           <a href="#programs">Roadmap</a>
-          <a href="#fees">ค่าเรียน</a>
+          <a href="#flexible">รูปแบบเรียน</a>
           <a href="#schedule">เวลาเรียน</a>
           <a href="#team">ทีมครู</a>
         </div>
@@ -88,7 +78,7 @@ export default function Home() {
         <details className="mobile-menu">
           <summary aria-label="เปิดเมนู">เมนู</summary>
           <div>
-            <a href="#programs">Roadmap</a><a href="#fees">ค่าเรียน</a><a href="#schedule">เวลาเรียน</a><a href="#team">ทีมครู</a>
+            <a href="#programs">Roadmap</a><a href="#flexible">รูปแบบเรียน</a><a href="#schedule">เวลาเรียน</a><a href="#team">ทีมครู</a>
             <a href={LINE_URL} target="_blank" rel="noreferrer">ทดลองเรียนฟรี ↗</a>
           </div>
         </details>
@@ -141,26 +131,39 @@ export default function Home() {
             </article>
           ))}
         </div>
-        <div className="roadmap-actions">
-          <a href="/updates/curriculum-overview.jpg" target="_blank">ดู Curriculum Overview ↗</a>
-          <a href="/updates/roadmap-and-fees.jpg" target="_blank">ดู Roadmap ฉบับโปสเตอร์ ↗</a>
+        <div className="roadmap-actions"><a href="/updates/curriculum-overview.jpg" target="_blank">ดู Curriculum Overview ↗</a><a href="/updates/free-trial-standee.jpg" target="_blank">ดูภาพรวมสถาบัน ↗</a></div>
+      </section>
+
+      <section className="flex-section" id="flexible">
+        <div className="tech-ticker" aria-label="เทคโนโลยีที่ใช้ในหลักสูตร"><span>SCRATCH</span><i>◆</i><span>PYTHON</span><i>◆</i><span>ROBOTICS</span><i>◆</i><span>IoT</span><i>◆</i><span>GENERATIVE AI</span><i>◆</i><span>CYBERSECURITY</span><i>◆</i><span>3D DESIGN</span></div>
+        <div className="section-kicker light">MISSION CONFIGURATOR <span>03</span></div>
+        <div className="flex-head"><div><h2>ออกแบบเส้นทางเรียน<br />ให้พอดีกับชีวิตจริง</h2><p>ไม่จำเป็นต้องเริ่มเหมือนกันหรือเรียนด้วยจังหวะเดียวกัน ทีมครูช่วยจัดเส้นทางให้เหมาะกับเป้าหมาย เวลาว่าง ประสบการณ์ และงบประมาณของแต่ละครอบครัว</p></div><div className="system-status"><span>PERSONAL LEARNING PATH</span><strong>READY TO CONFIGURE</strong><small>CRAFT CODE ADVISOR · ONLINE</small></div></div>
+        <div className="config-grid">
+          <article><span>INPUT 01</span><h3>เลือกเป้าหมาย</h3><div><b>สร้างเกม</b><b>หุ่นยนต์</b><b>AI</b><b>Portfolio</b></div><p>เริ่มจากสิ่งที่ผู้เรียนอยากทำจริง</p></article>
+          <article><span>INPUT 02</span><h3>เลือกช่วงเวลา</h3><div><b>วันธรรมดา</b><b>เสาร์–อาทิตย์</b><b>รอบเช้า</b><b>รอบเย็น</b></div><p>จัดรอบเรียนให้เข้ากับตารางชีวิต</p></article>
+          <article><span>INPUT 03</span><h3>เลือกจังหวะ</h3><div><b>ทดลองก่อน</b><b>เริ่มพื้นฐาน</b><b>เรียนต่อเนื่อง</b><b>เร่งทำผลงาน</b></div><p>เรียนเท่าที่พร้อม แล้วค่อยต่อยอด</p></article>
+          <article className="budget-card"><span>INPUT 04</span><h3>วางแผนตามงบ</h3><div><b>แผนยืดหยุ่น</b><b>เลือกจำนวน Level</b></div><p>ให้ทีมช่วยออกแบบทางเลือกที่คุ้มค่า โดยไม่ต้องลดเป้าหมายของผู้เรียน</p></article>
+        </div>
+        <div className="config-output"><div className="output-orb">AI</div><div><span>OUTPUT</span><h3>YOUR PERSONAL MISSION MAP</h3><p>รับคำแนะนำหลักสูตรและรอบเรียนที่เหมาะกับคุณโดยไม่มีค่าใช้จ่าย</p></div><a className="primary-button" href={LINE_URL} target="_blank" rel="noreferrer">ให้ทีมช่วยวางแผน <span>↗</span></a></div>
+      </section>
+
+      <section className="lab-section">
+        <div className="section-kicker">TECHNOLOGY LABS <span>04</span></div>
+        <div className="lab-head"><h2>ไม่ได้เรียนแค่ Tool<br />แต่เรียนวิธีคิดแบบ Creator</h2><p>เทคโนโลยีเปลี่ยนได้ทุกปี เราจึงเน้นพื้นฐานที่ใช้ได้ตลอดชีวิต พร้อมเปิดพื้นที่ให้ทดลองเครื่องมือและเทคโนโลยีปัจจุบันผ่านโปรเจกต์จริง</p></div>
+        <div className="lab-grid">
+          <article><div className="lab-code">LAB_A</div><h3>ROBOTICS SYSTEMS</h3><p>กลไก มอเตอร์ เซ็นเซอร์ Microcontroller และ IoT</p><span>BUILD / CONNECT / AUTOMATE</span></article>
+          <article><div className="lab-code">LAB_B</div><h3>CREATIVE COMPUTING</h3><p>Scratch, Python, Roblox Studio และ 3D Modeling</p><span>CODE / DESIGN / PLAY</span></article>
+          <article><div className="lab-code">LAB_C</div><h3>AI & DIGITAL FUTURE</h3><p>LLMs, Prompting, Generative Media, Workflow และ Cybersecurity</p><span>CREATE / THINK / LEAD</span></article>
         </div>
       </section>
 
-      <section className="fees-section" id="fees">
-        <div className="section-kicker">COURSE FEES <span>03</span></div>
-        <div className="fees-head"><h2>เลือกแพ็กที่เหมาะ<br />กับจังหวะการเรียน</h2><div><p>ราคาอัปเดตเดือนพฤษภาคม 2026</p><strong>ค่าธรรมเนียมแรกเข้า 1,000 บาท</strong><small>English Program เพิ่ม 4,000 บาท / คอร์ส</small></div></div>
-        <div className="fee-table-wrap"><table className="fee-table"><thead><tr><th>หลักสูตร</th><th>ต่อ Level</th><th>Pack S<br/><small>2 Levels</small></th><th>Pack M<br/><small>4 Levels · ลด 5%</small></th><th>Pack L<br/><small>6 Levels · ลด 10%</small></th></tr></thead><tbody>{fees.map(row => <tr key={row[0]}>{row.map((cell,i) => <td key={i}>{i > 1 && cell !== "–" ? `฿${cell}` : cell}</td>)}</tr>)}</tbody></table></div>
-        <p className="fee-note">ราคาอาจเปลี่ยนแปลงตามโปรโมชัน กรุณาติดต่อ Facebook หรือ LINE Official เพื่อรับข้อมูลและสิทธิพิเศษล่าสุด</p>
-      </section>
-
       <section className="schedule-section" id="schedule">
-        <div className="schedule-copy"><div className="section-kicker light">TIMETABLE <span>04</span></div><h2>เปิดทุกวัน<br />เลือกเวลาที่ลงตัว</h2><div className="open-hours"><div><span>MON–FRI</span><strong>09:00–18:30</strong></div><div><span>SAT–SUN</span><strong>10:00–18:00</strong></div></div><p>ช่วงเวลาเรียนมาตรฐานเริ่มตั้งแต่ 10:00 น. มีรอบเช้า บ่าย และเย็น โดยที่นั่งและวิชาที่เปิดในแต่ละรอบอาจเปลี่ยนแปลง</p><a className="primary-button" href={LINE_URL} target="_blank" rel="noreferrer">เช็กที่นั่งกับทีมงาน <span>↗</span></a></div>
+        <div className="schedule-copy"><div className="section-kicker light">TIMETABLE <span>05</span></div><h2>เปิดทุกวัน<br />เลือกเวลาที่ลงตัว</h2><div className="open-hours"><div><span>MON–FRI</span><strong>09:00–18:30</strong></div><div><span>SAT–SUN</span><strong>10:00–18:00</strong></div></div><p>ช่วงเวลาเรียนมาตรฐานเริ่มตั้งแต่ 10:00 น. มีรอบเช้า บ่าย และเย็น โดยที่นั่งและวิชาที่เปิดในแต่ละรอบอาจเปลี่ยนแปลง</p><a className="primary-button" href={LINE_URL} target="_blank" rel="noreferrer">เช็กที่นั่งกับทีมงาน <span>↗</span></a></div>
         <a className="schedule-poster" href="/updates/timetable.jpg" target="_blank"><img src="/updates/timetable.jpg" alt="ตารางเวลาเรียน Craft Code เดือนพฤษภาคม 2026" /><span>เปิดตารางฉบับเต็ม ↗</span></a>
       </section>
 
       <section className="experience-section">
-        <div className="section-kicker">LEARNING EXPERIENCE <span>05</span></div>
+        <div className="section-kicker">LEARNING EXPERIENCE <span>06</span></div>
         <div className="experience-head"><h2>ห้องเรียนที่ออกแบบ<br />ให้ไอเดียทะยานได้</h2><p>พื้นที่ปลอดภัย สนุก และเต็มไปด้วยอุปกรณ์ที่ชวนให้น้องอยากลอง ครูดูแลใกล้ชิดแบบโค้ช ให้คำแนะนำโดยไม่แย่งความภูมิใจในการค้นพบ</p></div>
         <div className="photo-grid"><figure className="photo-large"><img src="/images/coding-class.jpeg" alt="ครู Craft Code ดูแลนักเรียนในคลาส Coding" /><figcaption>SMALL CLASS · CLOSE COACHING</figcaption></figure><figure><img src="/images/cassiope-room.jpeg" alt="ห้องเรียน Cassiope ของ Craft Code" /><figcaption>ROBOTICS LAB</figcaption></figure><figure><img src="/images/stella-room.jpeg" alt="ห้องเรียน Stella ของ Craft Code" /><figcaption>CREATIVE PLAY SPACE</figcaption></figure></div>
       </section>
