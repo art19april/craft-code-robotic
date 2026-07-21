@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import { Noto_Sans_Thai, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  process.env.URL ??
+  "https://craft-code-robotic-thailand.artapichart.chatgpt.site";
+
 const thai = Noto_Sans_Thai({
   variable: "--font-thai",
   subsets: ["thai", "latin"],
@@ -15,7 +20,7 @@ const display = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://craft-code-robotic-thailand.artapichart.chatgpt.site"),
+  metadataBase: new URL(siteUrl),
   title: "Craft Code Robotic | Coding, Robotics, Game Design & AI",
   description: "สถาบัน Coding, Robotics, Game Design และ AI สำหรับเด็ก เยาวชน และผู้ใหญ่ เรียนรู้ผ่านโปรเจกต์จริง พร้อมโค้ชดูแลใกล้ชิด ที่เซ็นทรัลแจ้งวัฒนะ",
   openGraph: {
