@@ -86,6 +86,8 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="stars" aria-hidden="true" /><div className="hero-orbit orbit-one" aria-hidden="true" /><div className="hero-orbit orbit-two" aria-hidden="true" />
+        <div className="hero-hud hud-left" aria-hidden="true"><span>SYS.CRAFT</span><b>CORE ONLINE</b></div>
+        <div className="hero-hud hud-right" aria-hidden="true"><span>MISSION 2026</span><b>FUTURE READY</b></div>
         <div className="hero-copy">
           <div className="eyebrow"><span /> UPDATED CURRICULUM · MAY 2026</div>
           <h1>ปลดล็อกศักยภาพ<em>สู่อนาคตแห่งนวัตกรรม</em></h1>
@@ -135,7 +137,7 @@ export default function Home() {
       </section>
 
       <section className="flex-section" id="flexible">
-        <div className="tech-ticker" aria-label="เทคโนโลยีที่ใช้ในหลักสูตร"><span>SCRATCH</span><i>◆</i><span>PYTHON</span><i>◆</i><span>ROBOTICS</span><i>◆</i><span>IoT</span><i>◆</i><span>GENERATIVE AI</span><i>◆</i><span>CYBERSECURITY</span><i>◆</i><span>3D DESIGN</span></div>
+        <div className="tech-ticker" aria-label="เทคโนโลยีที่ใช้ในหลักสูตร"><div className="ticker-track"><span>SCRATCH</span><i>◆</i><span>PYTHON</span><i>◆</i><span>ROBOTICS</span><i>◆</i><span>IoT</span><i>◆</i><span>GENERATIVE AI</span><i>◆</i><span>CYBERSECURITY</span><i>◆</i><span>3D DESIGN</span><i>◆</i><span aria-hidden="true">SCRATCH</span><i aria-hidden="true">◆</i><span aria-hidden="true">PYTHON</span><i aria-hidden="true">◆</i><span aria-hidden="true">ROBOTICS</span><i aria-hidden="true">◆</i><span aria-hidden="true">IoT</span><i aria-hidden="true">◆</i><span aria-hidden="true">GENERATIVE AI</span><i aria-hidden="true">◆</i><span aria-hidden="true">CYBERSECURITY</span><i aria-hidden="true">◆</i><span aria-hidden="true">3D DESIGN</span><i aria-hidden="true">◆</i></div></div>
         <div className="section-kicker light">MISSION CONFIGURATOR <span>03</span></div>
         <div className="flex-head"><div><h2>ออกแบบเส้นทางเรียน<br />ให้พอดีกับชีวิตจริง</h2><p>ไม่จำเป็นต้องเริ่มเหมือนกันหรือเรียนด้วยจังหวะเดียวกัน ทีมครูช่วยจัดเส้นทางให้เหมาะกับเป้าหมาย เวลาว่าง ประสบการณ์ และงบประมาณของแต่ละครอบครัว</p></div><div className="system-status"><span>PERSONAL LEARNING PATH</span><strong>READY TO CONFIGURE</strong><small>CRAFT CODE ADVISOR · ONLINE</small></div></div>
         <div className="config-grid">
