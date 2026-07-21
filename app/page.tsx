@@ -550,7 +550,7 @@ export default function Home() {
     const encoded = new URLSearchParams();
     formData.forEach((value, key) => encoded.append(key, String(value)));
     try {
-      const response = await fetch("/", {
+      const response = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encoded.toString(),
@@ -797,9 +797,6 @@ export default function Home() {
       </section>
 
       <section className="callback-section" id="callback">
-        <form className="netlify-form-blueprint" name="parent-callback" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" aria-hidden="true">
-          <input name="bot-field" /><input name="parent_name" /><input name="phone" /><input name="email" /><input name="line_id" /><input name="child_age" /><input name="interest" /><input name="convenient_time" /><textarea name="message" /><input name="consent" />
-        </form>
         <div className="callback-copy">
           <div className="section-kicker light">CONTACT MISSION CONTROL <span>10</span></div>
           <h2>ฝากข้อมูลไว้<br />ให้เราติดต่อกลับ</h2>
@@ -807,7 +804,7 @@ export default function Home() {
           <div className="callback-flow"><div><span>01</span><strong>ส่งข้อมูล</strong><small>ใช้เวลาประมาณ 1 นาที</small></div><div><span>02</span><strong>ทีมตรวจความต้องการ</strong><small>เลือกคอร์สและรอบที่เหมาะสม</small></div><div><span>03</span><strong>ติดต่อกลับ</strong><small>ผ่านโทรศัพท์ LINE หรืออีเมลที่ให้ไว้</small></div></div>
           <div className="callback-data-note"><strong>ข้อมูลไปที่ไหน?</strong><p>ข้อมูลจะถูกเก็บในระบบ Forms ของ Netlify และตั้งแจ้งเตือนไปยัง <a href="mailto:admin@craftcoderobotic.com">admin@craftcoderobotic.com</a> หลังเปิดใช้งานบนเว็บไซต์จริง</p></div>
         </div>
-        <form className="callback-form" name="parent-callback" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={submitContactForm}>
+        <form className="callback-form" name="parent-callback" method="POST" onSubmit={submitContactForm}>
           <input type="hidden" name="form-name" value="parent-callback" />
           <p className="honeypot-field"><label>กรุณาเว้นช่องนี้ว่าง <input name="bot-field" /></label></p>
           <div className="form-heading"><span>PARENT CALLBACK REQUEST</span><strong>ข้อมูลสำหรับติดต่อกลับ</strong><small>* จำเป็นต้องกรอก</small></div>
