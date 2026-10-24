@@ -15,6 +15,7 @@ const EN_TRANSLATIONS: Record<string, string> = {
   "เวลาเรียน": "Timetable",
   "ทีมครู": "Our Team",
   "ติดต่อกลับ": "Contact Us",
+  "Parent & Family AI": "Parent & Family AI",
   "ทดลองเรียนฟรี": "Free Trial",
   "เปิดเมนู": "Open menu",
   "เมนู": "Menu",
@@ -576,6 +577,7 @@ export default function Home() {
           <a href="#schedule">เวลาเรียน</a>
           <a href="#team">ทีมครู</a>
           <a href="#callback">ติดต่อกลับ</a>
+          <a className="parent-ai-nav-link" href="/parent-ai">Parent & Family AI</a>
         </div>
         <div className="language-switcher" role="group" aria-label="เลือกภาษา">
           <button type="button" className={language === "th" ? "active" : ""} aria-pressed={language === "th"} onClick={() => changeLanguage("th")}>TH</button>
@@ -586,7 +588,7 @@ export default function Home() {
         <details className="mobile-menu">
           <summary aria-label="เปิดเมนู">เมนู</summary>
           <div>
-            <a href="#programs">Roadmap</a><a href="#flexible">รูปแบบเรียน</a><a href="#news">ข่าว & ผลงาน</a><a href="#schedule">เวลาเรียน</a><a href="#team">ทีมครู</a><a href="#callback">ติดต่อกลับ</a>
+            <a href="#programs">Roadmap</a><a href="#flexible">รูปแบบเรียน</a><a href="#news">ข่าว & ผลงาน</a><a href="#schedule">เวลาเรียน</a><a href="#team">ทีมครู</a><a href="#callback">ติดต่อกลับ</a><a className="parent-ai-nav-link" href="/parent-ai">Parent & Family AI</a>
             <a href={LINE_URL} target="_blank" rel="noreferrer">ทดลองเรียนฟรี ↗</a>
           </div>
         </details>
