@@ -4,8 +4,7 @@ import "./globals.css";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
-  process.env.URL ??
-  "https://craft-code-robotic-thailand.artapichart.chatgpt.site";
+  "https://www.craftcoderobotic.com";
 
 const thai = Noto_Sans_Thai({
   variable: "--font-thai",
